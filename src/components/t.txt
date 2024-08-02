@@ -1,0 +1,17 @@
+METHOD: POST
+route: /buy
+body:JSON.stringify({
+             email, product_name, price, quantity,totalAmount, address,pincode,
+            })
+on successfull buyinh u update the product Table i.e (decrease the quantity. if quantity==0 delete it from table)
+
+
+
+
+transaction history table:
+on successfull buying make an entry in transaction history table with following attributes
+METHOD: POST
+route: /his
+body:JSON.stringify({
+             email, product_name, price, quantity,totalAmount, address,pincode,date&Time,status(delivered / pending)
+            })
